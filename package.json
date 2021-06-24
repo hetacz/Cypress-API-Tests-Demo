@@ -8,8 +8,7 @@
     "build": "ng build --prod  --base-href ./ && cp CNAME dist/CNAME",
     "test": "ng test",
     "lint": "ng lint --force",
-    "e2e": "ng e2e",
-    "cy:open": "cypress open"
+    "e2e": "ng e2e"
   },
   "pre-commit": [
     "lint"
