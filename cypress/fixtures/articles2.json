@@ -1,0 +1,19 @@
+{
+    "article": {
+        "title": "aa",
+        "slug": "aa-89d58p",
+        "body": "gg",
+        "createdAt": "2021-06-23T07:05:54.559Z",
+        "updatedAt": "2021-06-23T07:05:54.559Z",
+        "tagList": [],
+        "description": "gg",
+        "author": {
+            "username": "paulina098",
+            "bio": null,
+            "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+            "following": false
+        },
+        "favorited": false,
+        "favoritesCount": 6
+    }
+}

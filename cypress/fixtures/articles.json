@@ -1,0 +1,39 @@
+{
+    "articles": [
+        {
+            "title": "test articke",
+            "slug": "test-articke-30yf0y",
+            "body": "test articke",
+            "createdAt": "2021-06-23T07:07:42.726Z",
+            "updatedAt": "2021-06-23T07:07:42.726Z",
+            "tagList": [],
+            "description": "test articke",
+            "author": {
+                "username": "denisdou",
+                "bio": null,
+                "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+                "following": false
+            },
+            "favorited": false,
+            "favoritesCount": 1
+        },
+        {
+            "title": "aa",
+            "slug": "aa-89d58p",
+            "body": "gg",
+            "createdAt": "2021-06-23T07:05:54.559Z",
+            "updatedAt": "2021-06-23T07:05:54.559Z",
+            "tagList": [],
+            "description": "gg",
+            "author": {
+                "username": "paulina098",
+                "bio": null,
+                "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+                "following": false
+            },
+            "favorited": false,
+            "favoritesCount": 5
+        }
+    ],
+    "articlesCount": 500
+}
