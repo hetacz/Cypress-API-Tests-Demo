@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<testsuites>
+<testsuite name="Root Suite" timestamp="2021-06-28T20:15:06" tests="0" file="cypress/integration/firstTest.spec.js" time="0.0000" failures="0"></testsuite>
+<testsuite name="Test with backend" timestamp="2021-06-28T20:15:06" tests="5" time="24.1440" failures="0">
+  
+  <testcase name="Test with backend verify correct request and response" time="8.0430" classname="verify correct request and response"></testcase>
+  
+  <testcase name="Test with backend intercepting and modifying the request and response" time="4.0020" classname="intercepting and modifying the request and response"></testcase>
+  
+  <testcase name="Test with backend should give tags with route objects" time="1.6310" classname="should give tags with route objects"></testcase>
+  
+  <testcase name="Test with backend verify global feed likes count" time="4.6490" classname="verify global feed likes count"></testcase>
+  
+  <testcase name="Test with backend delete new article in global feed" time="5.8190" classname="delete new article in global feed"></testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2021-06-28T20:15:39" tests="0" file="cypress/integration/secondTest.spec.js" time="0.0000" failures="0"></testsuite>
+<testsuite name="Test log out" timestamp="2021-06-28T20:15:39" tests="1" time="3.1060" failures="0">
+  
+  <testcase name="Test log out veryify, user can log out succesfully" time="3.1060" classname="veryify, user can log out succesfully"></testcase>
+  
+</testsuite>
+
+</testsuites>
