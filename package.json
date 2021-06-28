@@ -16,7 +16,7 @@
     "cy:open": "npx cypress open",
     "cy:run": "npm run prereport && npx cypress run",
     "cy:run_qa": "npx cypress run --env configFile=qa",
-    "cy:e2e": "start-test start http-get://localhost:4200 cy:run && npm run mocha:merge && npm run junit:merge "
+    "cy:e2e": "start-test start http-get://localhost:4200 cy:run && npm run mocha:merge && npm run junit:merge"
   },
   "pre-commit": [
     "lint"
