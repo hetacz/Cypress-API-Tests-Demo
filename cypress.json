@@ -1,19 +1,20 @@
 {
-    "baseUrl": "http://localhost:4200",
-    "viewportHeight": 1080,
-    "viewportWidth": 1920,
-    "video": false,
-    "retries": {
-        "runMode": 2,
-        "openMode": 1
-    },
-    "reporter": "cypress-multi-reporters",
-    "reporterOptions": {
-        "configFile": "reporter-config.json"
-    },
-    "env": {
-        "username": "edzioo@gmail.com",
-        "password": "Qwe123!@#",
-        "apiUrl": "https://conduit.productionready.io/"
-    }
+  "baseUrl": "http://localhost:4200",
+  "viewportHeight": 1080,
+  "viewportWidth": 1920,
+  "video": true,
+  "retries": {
+    "runMode": 2,
+    "openMode": 1
+  },
+  "reporter": "cypress-multi-reporters",
+  "reporterOptions": {
+    "configFile": "reporter-config.json"
+  },
+  "env": {
+    "username": "edzioo@gmail.com",
+    "password": "Qwe123!@#",
+    "apiUrl": "https://conduit.productionready.io/"
+  },
+  "projectId": "hjmfrr"
 }

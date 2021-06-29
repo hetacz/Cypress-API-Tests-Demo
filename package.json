@@ -15,6 +15,7 @@
     "junit:merge": "npx junit-merge -d cypress/results/junit -o cypress/results/junit/result.xml",
     "cy:open": "npx cypress open",
     "cy:run": "npm run prereport && npx cypress run",
+    "cy:spec": "npx cypress run --record --key eb2929b6-544e-4061-bf3e-a01a133bdbe9",
     "cy:run_qa": "npx cypress run --env configFile=qa",
     "cy:e2e": "start-test start http-get://localhost:4200 cy:run && npm run mocha:merge && npm run junit:merge"
   },
