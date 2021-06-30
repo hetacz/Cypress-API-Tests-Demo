@@ -2,5 +2,9 @@
     "env": {
         "username": "testQ22@example.com",
         "password": "Test1234"
+    },
+    "retries": {
+        "runMode": 2,
+        "openMode": 1
     }
 }
