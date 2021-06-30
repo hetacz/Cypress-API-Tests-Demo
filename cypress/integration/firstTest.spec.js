@@ -1,5 +1,7 @@
 /// <reference types="cypress" />
 
+import { onPublishPage } from "../support/page_objects/publishPage"
+
 describe('Test with backend', () => {
 
     beforeEach('log to the app', () => {
@@ -22,11 +24,7 @@ describe('Test with backend', () => {
         //cy.route('POST', '**/articles').as('postArticles')
         cy.intercept('POST', '**/articles').as('postArticles')
 
-        cy.contains('New Article').click()
-        cy.get('[formcontrolname="title"]').type('This is a title')
-        cy.get('[formcontrolname="description"]').type('This is a description')
-        cy.get('[formcontrolname="body"]').type('This is a body')
-        cy.contains('Publish Article').click()
+        onPublishPage.publishArticle('This is a title', 'This is a description', 'This is a body')
 
         cy.wait('@postArticles')
         .then(xhr => { 
@@ -58,11 +56,7 @@ describe('Test with backend', () => {
             })
         }).as('postArticles')
 
-        cy.contains('New Article').click()
-        cy.get('[formcontrolname="title"]').type('This is a title')
-        cy.get('[formcontrolname="description"]').type('This is a description')
-        cy.get('[formcontrolname="body"]').type('This is a body')
-        cy.contains('Publish Article').click()
+        onPublishPage.publishArticle('This is a title', 'This is a description', 'This is a body')
 
         cy.wait('@postArticles')
         .then(xhr => { 
