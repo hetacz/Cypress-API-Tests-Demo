@@ -9,7 +9,7 @@
     "test": "ng test",
     "lint": "ng lint --force",
     "e2e": "ng e2e",
-    "delete:reports": "(if exist cypress\\results (rmdir /Q /S cypress\\results)) && mkdir cypress\\results && mkdir cypress\\results\\mochawesome  &&  mkdir cypress\\results\\junit",
+    "delete:reports": "rm -rf cypress/results* || true",
     "prereport": "npm run delete:reports",
     "mocha:merge": "npx mochawesome-merge \"cypress/results/mochawesome/*.json\" > mochawesome.json && npx marge mochawesome.json",
     "junit:merge": "npx junit-merge -d cypress/results/junit -o cypress/results/junit/result.xml",
