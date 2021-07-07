@@ -5,13 +5,6 @@ import { onPublishPage } from "../support/page_objects/publishPage"
 describe('Test with backend', () => {
 
     beforeEach('log to the app', () => {
-        //cy.intercept('GET', '**/tags', {
-        /*        "tags": [
-                "cypress‌",
-                "‌‌automation",
-                "‌‌‌testing"
-            ]
-        }) */
 
         cy.intercept({method: 'GET', path: 'tags'}, {fixture:'tags.json'})
 
@@ -20,8 +13,6 @@ describe('Test with backend', () => {
 
     it('verify correct request and response', () => {
 
-        //cy.server()
-        //cy.route('POST', '**/articles').as('postArticles')
         cy.intercept('POST', '**/articles').as('postArticles')
 
         onPublishPage.publishArticle('This is a title', 'This is a description', 'This is a body')
@@ -33,21 +24,9 @@ describe('Test with backend', () => {
             expect(xhr.request.body.article.body).to.equal('This is a body')
             expect(xhr.response.body.article.description).to.equal('This is a description')
         })
-        
-        
-        /*cy.wait('@postArticles').should(({ request, response }) => {
-            console.log(request.statusCode)
-            expect(response.statusCode).to.equal(200)
-            expect(request.body.article.body).to.equal('This is a body')
-            expect(response.body.article.description).to.equal('This is a description')
-        })*/
     })
 
     it('intercepting and modifying the request and response', () => {
-
-        // cy.intercept('POST', '**/articles', (req) => {
-        //     req.body.article.description = "This is a description 2"
-        // }).as('postArticles')
 
         cy.intercept('POST', '**/articles', (req) => {
             req.reply(res => {
@@ -69,6 +48,7 @@ describe('Test with backend', () => {
     })
     
     it('should give tags with route objects', () => {
+        
         cy.get('.tag-list')
             .should('contain', 'cypress')
             .and('contain', 'automation')
@@ -92,9 +72,9 @@ describe('Test with backend', () => {
         })
 
         cy.get('app-article-list button')
-        .eq(0)
-        .click()
-        .should('contain', '2')
+            .eq(0)
+            .click()
+            .should('contain', '2')
     })
 
     it('delete new article in global feed', () => {
@@ -106,10 +86,7 @@ describe('Test with backend', () => {
             "body": "Angular is cool"
         }
 
-        //cy.request('POST', 'https://conduit.productionready.io/api/users/login', userCredentials)
-        //.its('body')
-        cy.get('@token').then(token => {
-            
+        cy.get('@token').then(token => {      
             cy.request({
                 url: Cypress.env('apiUrl')+'api/articles/',
                 headers: {'Authorization': 'Token ' +token},
