@@ -12,9 +12,9 @@ export class User {
         cy.get('button').contains('Sign up').click()
     }
 
-    signUpApi(){
+    //signUpApi(){
 
-    }
+    //}
 }
 
 export const createUser = new User ()
