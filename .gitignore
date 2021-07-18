@@ -4,6 +4,7 @@
 /cypress/screenshots
 /cypress/results
 /mochawesome-report
+package-lock.json
 
 # compiled output
 /dist
