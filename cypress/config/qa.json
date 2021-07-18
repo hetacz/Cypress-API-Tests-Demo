@@ -2,7 +2,7 @@
     "env": {
         "username": "testQ22@example.com",
         "password": "Test1234",
-        "apiUrl": "https://conduit.productionready.io/"
+        "apiUrl": "https://conduit.productionready.io/api/"
     },
     "retries": {
         "runMode": 2,
