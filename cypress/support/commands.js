@@ -22,9 +22,4 @@ Cypress.Commands.add('loginToApplication', () => {
                 }
             })
         })
-
-    // cy.visit('/login')
-    // cy.get('[placeholder="Email"]').type('edzioo@gmail.com')
-    // cy.get('[placeholder="Password"]').type('Qwe123!@#')
-    // cy.get('form').submit()
 })

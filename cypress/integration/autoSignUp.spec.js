@@ -1,14 +1,14 @@
 /// <reference types="cypress" />
 
-describe('Test log out', () => {
+describe('Signup', () => {
 
     beforeEach('login to the app', () => {
-        cy.loginToApplication()
+        cy.visit('/')
     })
 
-    it('veryify, user can log out succesfully', () => {
-        cy.contains('Settings').click()
-        cy.contains('Or click here to logout').click()
-        cy.get('.navbar-nav').should('contain', 'Sign up')
+    it('Test valid signup', () => {
+
+
+        
     })
 })

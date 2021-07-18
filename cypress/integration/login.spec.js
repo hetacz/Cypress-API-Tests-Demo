@@ -7,8 +7,8 @@ describe('Test log out', () => {
     })
 
     it('veryify, user can log out succesfully', () => {
-        cy.contains('Settings').click()
-        cy.contains('Or click here to logout').click()
+        cy.get('.nav').contains('Settings').click()
+        cy.get('button').contains('Or click here to logout').click()
         cy.get('.navbar-nav').should('contain', 'Sign up')
     })
 })
