@@ -10,7 +10,7 @@
   "env": {
     "username": "edzioo@gmail.com",
     "password": "Qwe123!@#",
-    "apiUrl": "https://conduit.productionready.io/"
+    "apiUrl": "https://conduit.productionready.io/api/"
   },
   "projectId": "hjmfrr"
 }
