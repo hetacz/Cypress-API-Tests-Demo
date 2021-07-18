@@ -1,16 +1,16 @@
-/// <reference types="cypress" />
+// /// <reference types="cypress" />
 
-import { createUser } from "../support/page_objects/loginProcess"
+// import { createUser } from "../support/page_objects/loginProcess"
 
-describe('Signup', () => {
+// describe('Signup', () => {
 
-    beforeEach('login to the app', () => {
-        cy.visit('/')
-    })
+//     beforeEach('login to the app', () => {
+//         cy.visit('/')
+//     })
 
-    it('Test valid signup', () => {
+//     it('Test valid signup', () => {
         
-        createUser.signUp()
+//         createUser.signUp()
 
-    })
-})
+//     })
+// })
