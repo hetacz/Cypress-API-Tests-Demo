@@ -1,16 +1,26 @@
-// /// <reference types="cypress" />
+/// <reference types="cypress" />
 
-// import { createUser } from "../support/page_objects/loginProcess"
+import { createUser } from "../support/page_objects/loginProcess"
 
-// describe('Signup', () => {
+describe('API Tests', () => {
 
-//     beforeEach('login to the app', () => {
-//         cy.visit('/')
-//     })
+    before('Create Account', () => {
+        createUser.signUpApi()
+    })
 
-//     it('Test valid signup', () => {
-        
-//         createUser.signUp()
+    beforeEach('Be logged in', () => {
+        createUser.loginWithToken()
+    })
 
-//     })
-// })
+    context('Tests body', () => {
+
+        it('Check if previously created user is logged in', () => {
+            cy.get('.nav-item').eq(3).should('contain' , createUser.myName)
+        })
+
+        it('Fixture Articles into my feed', () => {
+            cy.intercept({method: 'GET', path: '**/feed*'}, {fixture:'myfeed.json'})
+        })
+
+    })
+})
