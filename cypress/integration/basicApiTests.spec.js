@@ -7,8 +7,7 @@ describe('Test with backend', () => {
     beforeEach('log to the app', () => {
 
         cy.intercept({method: 'GET', path: 'tags'}, {fixture:'tags.json'})
-        cy.intercept({method: 'GET', path: '**/feed*'}, {fixture:'myfeed.json'})
-
+        //cy.intercept({method: 'GET', path: '**/feed*'}, {fixture:'myfeed.json'})
 
         cy.loginToApplication()
     })
