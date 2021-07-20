@@ -14,3 +14,5 @@ jobs:
         uses: cypress-io/github-action@v2
         with:
           start: npm run cy:e2e
+          wait-on: 'http://localhost:4200'
+          wait-on-timeout: 120
