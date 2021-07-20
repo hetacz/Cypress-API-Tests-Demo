@@ -17,10 +17,5 @@ describe('API Tests', () => {
         it('Check if previously created user is logged in', () => {
             cy.get('.nav-item').eq(3).should('contain' , createUser.myName)
         })
-
-        it('Fixture Articles into my feed', () => {
-            cy.intercept({method: 'GET', path: '**/feed*'}, {fixture:'myfeed.json'})
-        })
-
     })
 })
