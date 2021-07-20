@@ -7,7 +7,7 @@ describe('Test with backend', () => {
     beforeEach('log to the app', () => {
 
         cy.intercept({method: 'GET', path: 'tags'}, {fixture:'tags.json'})
-        //cy.intercept({method: 'GET', path: '**/feed*'}, {fixture:'myfeed.json'})
+        cy.intercept({method: 'GET', path: '**/feed*'}, {fixture:'myfeed.json'})
 
         cy.loginToApplication()
     })
@@ -78,7 +78,7 @@ describe('Test with backend', () => {
             .should('contain', '2')
     })
 
-    it('delete new article in global feed', () => {
+    it.skip('delete new article in global feed', () => {
 
         const bodyRequest = {
             "tagList": [],
